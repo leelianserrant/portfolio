@@ -1,8 +1,8 @@
-name: Deploy React site
+name: Deploy React from src
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"] # Vérifie bien si ta branche est 'main' ou 'master'
 
 permissions:
   contents: read
@@ -28,13 +28,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'
+          path: './dist' 
 
       - name: Deploy to GitHub Pages
         id: deployment
