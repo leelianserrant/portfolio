@@ -40,7 +40,7 @@ export default function PasseportCulturel() {
               quotidien, comme le <b>clavier</b> par exemple, ce qui m'a permis d'enrichir
               ma culture et de comprendre d'où viennent les outils que j'utilise chaque jour.
             </p>
-            <img src="/assets/museedesarts.jpg" alt="Musée des Arts et Métiers au CNAM" className="passeport-photo" />
+            <img src={`${import.meta.env.BASE_URL}assets/museedesarts.jpg`} alt="Musée des Arts et Métiers au CNAM" className="passeport-photo" />
           </div>
         </div>
       </div>

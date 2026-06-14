@@ -11,7 +11,7 @@ export default function Presentation() {
         </div>
         <div className="pres-grid">
           <div className="pres-photo">
-            <img src="/assets/photo.webp" alt="Leelian Serrant" />
+            <img src={`${import.meta.env.BASE_URL}assets/photo.webp`} alt="Leelian Serrant" />
           </div>
           <div className="pres-content">
             <div className="liner-title">

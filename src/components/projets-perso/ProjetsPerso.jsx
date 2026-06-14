@@ -34,9 +34,9 @@ export default function ProjetsPerso() {
               mieux architecturer mes jeux.
             </p>
             <div className="perso-gallery">
-              <img src="/assets/roblox1.png" alt="Capture Roblox 1" className="gallery-img" />
-              <img src="/assets/roblox2.png" alt="Capture Roblox 2" className="gallery-img" />
-              <img src="/assets/roblox3.png" alt="Capture Roblox 3" className="gallery-img" />
+              <img src={`${import.meta.env.BASE_URL}assets/roblox1.png`} alt="Capture Roblox 1" className="gallery-img" />
+              <img src={`${import.meta.env.BASE_URL}assets/roblox2.png`} alt="Capture Roblox 2" className="gallery-img" />
+              <img src={`${import.meta.env.BASE_URL}assets/roblox3.png`} alt="Capture Roblox 3" className="gallery-img" />
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <a href="/assets/cv.pdf" download className="btn solid cv-download">
+        <a href={`${import.meta.env.BASE_URL}assets/cv.pdf`} download className="btn solid cv-download">
           ↓ Télécharger mon CV (PDF)
         </a>
 

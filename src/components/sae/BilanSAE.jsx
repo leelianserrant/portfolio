@@ -33,8 +33,8 @@ export default function BilanSAE() {
             → Acquis : gestion de projet sous contrainte, optimisation, direction artistique, arbitrage des priorités
           </div>
           <div className="sae-screenshots">
-            <img src="/assets/trackstar1.png" alt="Capture SAE S5" className="screenshot-img" />
-            <img src="/assets/trackstar2.png" alt="Capture SAE S5" className="screenshot-img" />
+            <img src={`${import.meta.env.BASE_URL}assets/trackstar1.png`} alt="Capture SAE S5" className="screenshot-img" />
+            <img src={`${import.meta.env.BASE_URL}assets/trackstar2.png`} alt="Capture SAE S5" className="screenshot-img" />
           </div>
         </div>
 
@@ -60,8 +60,8 @@ export default function BilanSAE() {
             → Acquis : pensée critique, réflexion éthique sur l'IA, synthèse, travail collaboratif
           </div>
           <div className="sae-screenshots">
-            <img src="/assets/voronoi.svg" alt="Capture SAE S6 - Voronoi" className="screenshot-img" />
-            <img src="/assets/voronoi2.png" alt="Capture SAE S6 - Voronoi" className="screenshot-img" />
+            <img src={`${import.meta.env.BASE_URL}assets/voronoi.svg`} alt="Capture SAE S6 - Voronoi" className="screenshot-img" />
+            <img src={`${import.meta.env.BASE_URL}assets/voronoi2.png`} alt="Capture SAE S6 - Voronoi" className="screenshot-img" />
           </div>
         </div>
 
