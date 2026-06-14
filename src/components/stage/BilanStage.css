@@ -1,0 +1,82 @@
+.stage-card {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 32px;
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+}
+
+.stage-header .company {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: var(--acid);
+}
+
+.stage-header .details {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--smoke);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.stage-body {
+  padding: 32px;
+}
+
+.stage-body p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.stage-body p b {
+  color: var(--bone);
+}
+
+.stage-body p .highlight {
+  color: var(--acid);
+}
+
+.stage-missions {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.mission {
+  padding: 16px 20px;
+  background: rgba(198, 255, 58, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--bone);
+  letter-spacing: 0.5px;
+}
+
+.mission::before {
+  content: "▸ ";
+  color: var(--acid);
+}
+
+@media (max-width: 640px) {
+  .stage-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+  }
+  .stage-body { padding: 20px; }
+}

@@ -1,0 +1,96 @@
+.perso-intro {
+  font-size: 16px;
+  color: var(--smoke);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.perso-intro b {
+  color: var(--bone);
+}
+
+.perso-card {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.perso-card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.perso-card-header .perso-icon {
+  font-size: 32px;
+}
+
+.perso-card-header h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.perso-card-header .perso-tag {
+  margin-left: auto;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--acid);
+  letter-spacing: 2px;
+  border: 1px solid var(--acid);
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.perso-card-body {
+  padding: 28px;
+}
+
+.perso-card-body p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.perso-card-body p b {
+  color: var(--bone);
+}
+
+.perso-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.perso-gallery .gallery-slot {
+  aspect-ratio: 16 / 9;
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--smoke);
+  overflow: hidden;
+}
+
+.perso-gallery .gallery-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perso-gallery .gallery-img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}

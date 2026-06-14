@@ -1,0 +1,129 @@
+.comp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.comp-table thead th {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--smoke);
+  text-transform: uppercase;
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+}
+
+.comp-table thead th:last-child {
+  text-align: center;
+  width: 120px;
+}
+
+.comp-table tbody td {
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.comp-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comp-table tbody tr:hover {
+  background: rgba(198, 255, 58, 0.03);
+}
+
+.comp-name {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.comp-desc {
+  font-size: 13px;
+  color: var(--smoke);
+  line-height: 1.5;
+}
+
+.vu-meter {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50px;
+}
+
+.vu-meter .led {
+  width: 14px;
+  border-radius: 2px;
+  transition: height 0.6s ease-out, background 0.3s;
+}
+
+.vu-meter .led.on-green {
+  background: var(--acid);
+  box-shadow: 0 0 8px rgba(198, 255, 58, 0.3);
+}
+
+.vu-meter .led.on-gold {
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(242, 183, 5, 0.3);
+}
+
+.vu-meter .led.on-red {
+  background: var(--magenta);
+  box-shadow: 0 0 8px rgba(255, 45, 111, 0.3);
+}
+
+.vu-meter .led.off {
+  background: var(--concrete);
+}
+
+.comp-score {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 28px;
+  color: var(--acid);
+  margin-top: 6px;
+}
+
+.comp-synth {
+  margin-top: 30px;
+  padding: 24px;
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.comp-synth h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.comp-synth p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.7;
+}
+
+.comp-synth p b {
+  color: var(--bone);
+}
+
+@media (max-width: 640px) {
+  .comp-table thead { display: none; }
+  .comp-table tbody td {
+    display: block;
+    padding: 14px 16px;
+  }
+  .vu-meter { justify-content: flex-start; }
+}

@@ -1,0 +1,8 @@
+footer {
+  padding: 40px 0 110px;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--concrete);
+  letter-spacing: 2px;
+}

@@ -1,0 +1,102 @@
+.sae-block {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 32px;
+  margin-bottom: 28px;
+  transition: border-color 0.3s;
+}
+
+.sae-block:hover {
+  border-color: var(--magenta);
+}
+
+.sae-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.sae-label .sae-num {
+  font-family: 'Anton', sans-serif;
+  font-size: 42px;
+  color: var(--concrete);
+}
+
+.sae-block:hover .sae-num {
+  color: var(--acid);
+}
+
+.sae-label h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.sae-label .semester {
+  margin-left: auto;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--smoke);
+  letter-spacing: 2px;
+}
+
+.sae-block p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.sae-block p b {
+  color: var(--bone);
+}
+
+.sae-block p .highlight {
+  color: var(--acid);
+}
+
+.sae-takeaway {
+  margin-top: 18px;
+  padding: 16px 20px;
+  background: rgba(198, 255, 58, 0.04);
+  border-left: 3px solid var(--acid);
+  border-radius: 0 4px 4px 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--bone);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+.sae-screenshots {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+.sae-screenshots .screenshot-slot {
+  min-width: 180px;
+  height: 110px;
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--smoke);
+  flex-shrink: 0;
+}
+
+.sae-screenshots .screenshot-img {
+  min-width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  flex-shrink: 0;
+}

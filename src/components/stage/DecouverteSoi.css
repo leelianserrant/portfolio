@@ -1,0 +1,79 @@
+.decouverte-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.decouverte-quote {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 36px 32px;
+  position: relative;
+}
+
+.decouverte-quote::before {
+  content: open-quote;
+  font-family: 'Anton', sans-serif;
+  font-size: 80px;
+  color: var(--magenta);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.decouverte-quote blockquote {
+  font-size: 18px;
+  color: var(--bone);
+  line-height: 1.7;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.decouverte-quote .source {
+  margin-top: 18px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--smoke);
+  letter-spacing: 1px;
+}
+
+.decouverte-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.decouverte-details .insight {
+  padding: 20px 24px;
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  border-left: 3px solid var(--acid);
+}
+
+.decouverte-details .insight h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--acid);
+}
+
+.decouverte-details .insight p {
+  font-size: 14px;
+  color: var(--smoke);
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .decouverte-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

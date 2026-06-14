@@ -1,0 +1,63 @@
+.passeport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.passeport-item {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px 24px;
+}
+
+.passeport-item h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passeport-item h3 .pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--magenta);
+}
+
+.passeport-item p {
+  font-size: 14px;
+  color: var(--smoke);
+  line-height: 1.7;
+}
+
+.passeport-item p b {
+  color: var(--bone);
+}
+
+.passeport-item .photo-slot {
+  margin-top: 16px;
+  width: 100%;
+  height: 140px;
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--smoke);
+}
+
+.passeport-item .passeport-photo {
+  margin-top: 16px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}

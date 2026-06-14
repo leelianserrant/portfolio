@@ -1,0 +1,90 @@
+.booking {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.booking h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(48px, 11vw, 150px);
+  text-transform: uppercase;
+  line-height: .85;
+  letter-spacing: -2px;
+}
+
+.booking h2 .out {
+  -webkit-text-stroke: 2px var(--acid);
+  color: transparent;
+}
+
+.booking h2 .pop {
+  color: var(--magenta);
+  display: inline-block;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 22px 28px;
+  text-align: center;
+  min-width: 200px;
+  transition: border-color 0.3s;
+}
+
+.contact-card:hover {
+  border-color: var(--acid);
+}
+
+.contact-card .contact-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--smoke);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contact-card a,
+.contact-card span {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: var(--bone);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-card a:hover {
+  color: var(--acid);
+}
+
+.cv-download {
+  display: inline-block;
+  margin-top: 36px;
+}
+
+.socials {
+  margin-top: 40px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.socials a {
+  color: var(--smoke);
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: var(--gold);
+}

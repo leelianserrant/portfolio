@@ -1,0 +1,65 @@
+.obj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.obj-card {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.obj-card:hover {
+  border-color: var(--acid);
+}
+
+.obj-card .horizon {
+  font-family: 'Anton', sans-serif;
+  font-size: 52px;
+  color: var(--concrete);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.obj-card:nth-child(1) .horizon { color: var(--acid); }
+.obj-card:nth-child(2) .horizon { color: var(--gold); }
+.obj-card:nth-child(3) .horizon { color: var(--magenta); }
+
+.obj-card h3 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.obj-card p {
+  font-size: 14px;
+  color: var(--smoke);
+  line-height: 1.7;
+}
+
+.obj-card p b {
+  color: var(--bone);
+}
+
+.obj-card .timeframe {
+  margin-top: 18px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--smoke);
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 760px) {
+  .obj-grid {
+    grid-template-columns: 1fr;
+  }
+}

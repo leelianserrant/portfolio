@@ -1,0 +1,105 @@
+.beatbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(10, 10, 12, .88);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 24px;
+}
+
+.beatbar .play {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border: none;
+  border-radius: 50%;
+  background: var(--acid);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  transition: transform .15s;
+}
+
+.beatbar .play:hover {
+  transform: scale(1.08);
+}
+
+body.live .beatbar .play {
+  animation: thump var(--beat-ms) ease-out infinite;
+}
+
+.eq {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 34px;
+  flex: none;
+}
+
+.eq span {
+  width: 4px;
+  background: var(--magenta);
+  height: 6px;
+  border-radius: 2px;
+}
+
+body.live .eq span {
+  animation: bounce .6s ease-in-out infinite;
+}
+
+.eq span:nth-child(2) { animation-delay: .1s; background: var(--gold); }
+.eq span:nth-child(3) { animation-delay: .2s; background: var(--acid); }
+.eq span:nth-child(4) { animation-delay: .05s; background: var(--magenta); }
+.eq span:nth-child(5) { animation-delay: .25s; background: var(--gold); }
+.eq span:nth-child(6) { animation-delay: .15s; background: var(--acid); }
+
+.beatbar .track {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--smoke);
+}
+
+.beatbar .track b {
+  color: var(--bone);
+  display: block;
+  font-size: 13px;
+}
+
+.bpm {
+  margin-left: auto;
+  font-family: 'Anton', sans-serif;
+  font-size: 22px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bpm small {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--smoke);
+  letter-spacing: 2px;
+}
+
+.bpm .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--concrete);
+}
+
+body.live .bpm .dot {
+  background: var(--magenta);
+  animation: hit var(--beat-ms) steps(1, end) infinite;
+}

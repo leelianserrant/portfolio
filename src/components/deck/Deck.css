@@ -1,0 +1,56 @@
+.mixer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.channel {
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.channel .lvl {
+  height: 160px;
+  width: 14px;
+  background: var(--concrete);
+  border-radius: 8px;
+  margin: 0 auto 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.channel .lvl i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, var(--magenta), var(--gold), var(--acid));
+  border-radius: 8px;
+  transform-origin: bottom;
+}
+
+body.live .channel .lvl i {
+  animation: vu var(--beat-ms) ease-out infinite;
+}
+
+.channel:nth-child(even) .lvl i {
+  animation-delay: calc(var(--beat-ms) / 2);
+}
+
+.channel label {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.channel small {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--smoke);
+  display: block;
+  margin-top: 4px;
+}

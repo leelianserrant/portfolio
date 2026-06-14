@@ -1,0 +1,211 @@
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 120px 0 90px;
+}
+
+.pulse-rings {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--magenta);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(.2);
+  opacity: 0;
+}
+
+body.live .ring {
+  animation: kick calc(var(--beat-ms) * 2) ease-out infinite;
+}
+
+body.live .ring:nth-child(2) {
+  animation-delay: calc(var(--beat-ms) * .66);
+  border-color: var(--acid);
+}
+
+body.live .ring:nth-child(3) {
+  animation-delay: calc(var(--beat-ms) * 1.33);
+  border-color: var(--gold);
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 3;
+}
+
+.eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--acid);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: var(--acid);
+}
+
+.eyebrow .rec {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--magenta);
+}
+
+body.live .eyebrow .rec {
+  animation: hit var(--beat-ms) steps(1, end) infinite;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(64px, 13vw, 180px);
+  line-height: .84;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+h1 .out {
+  -webkit-text-stroke: 2px var(--bone);
+  color: transparent;
+}
+
+h1 .fill { color: var(--bone); }
+
+h1 .beat {
+  color: var(--gold);
+  display: inline-block;
+  transform-origin: left bottom;
+}
+
+.tag {
+  margin-top: 30px;
+  max-width: 520px;
+  font-size: 18px;
+  color: var(--smoke);
+}
+
+.tag b { color: var(--bone); }
+
+.tag code {
+  font-family: 'Space Mono', monospace;
+  color: var(--acid);
+  font-size: 15px;
+}
+
+.cta-row {
+  margin-top: 38px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.term {
+  margin-top: 42px;
+  max-width: 560px;
+  background: #0d0d11;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  overflow: hidden;
+}
+
+body.live .term {
+  animation: termglow var(--beat-ms) ease-out infinite;
+}
+
+.term .bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  background: #111116;
+}
+
+.term .bar i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.term .bar i:nth-child(1) { background: var(--magenta); }
+.term .bar i:nth-child(2) { background: var(--gold); }
+.term .bar i:nth-child(3) { background: var(--acid); }
+
+.term .bar span {
+  margin-left: 8px;
+  color: var(--smoke);
+  font-size: 11px;
+}
+
+.term .body {
+  padding: 16px;
+  line-height: 1.7;
+  min-height: 50px;
+}
+
+.term .l1 { color: var(--smoke); }
+.term .pr { color: var(--acid); }
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--acid);
+  vertical-align: -2px;
+  margin-left: 2px;
+}
+
+body.live .cursor {
+  animation: blink var(--beat-ms) steps(1, end) infinite;
+}
+
+.marquee {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  z-index: 3;
+}
+
+.marquee div {
+  display: inline-block;
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: var(--concrete);
+  -webkit-text-stroke: 1px var(--smoke);
+  animation: scroll 22s linear infinite;
+}
+
+.marquee span { margin: 0 26px; }
+.marquee .hot {
+  -webkit-text-stroke: 1px var(--magenta);
+  color: transparent;
+}
